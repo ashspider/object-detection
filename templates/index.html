@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Coke Bottle Detector</title>
+  </head>
+  <body>
+    <h1>Coke Bottle Detector</h1>
+    <form id="upload-form" action="/predict" method="post" enctype="multipart/form-data">
+      <input type="file" name="image" id="image-input">
+      <br><br>
+      <input type="submit" value="Upload">
+    </form>
+    <div id="result-container"></div>
+    <script>
+      const form = document.querySelector('#upload-form');
+      const resultContainer = document.querySelector('#result-container');
+
+      form.addEventListener('submit', async (e) => {
+        e.preventDefault();
+        const formData = new FormData(form);
+        const response = await fetch('/predict', {
+          method: 'POST',
+          body: formData
+        });
+        const data = await response.json();
+        const numBottles = data.num_bottles;
+        const imageSrc = `data:image/jpeg;base64,${data.image}`;
+        const resultHtml = `
+          <p>Number of bottles detected: ${numBottles}</p>
+          <img src="${imageSrc}" alt="Result">
+        `;
+        resultContainer.innerHTML = resultHtml;
+      });
+    </script>
+  </body>
+</html>

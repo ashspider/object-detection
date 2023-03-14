@@ -1,0 +1,11 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Coke Bottle Detector - Result</title>
+  </head>
+  <body>
+    <h1>Coke Bottle Detector - Result</h1>
+    <p>Number of bottles detected: {{ response.num_bottles }}</p>
+    <img src="data:image/jpeg;base64,{{ image|b64encode }}" alt="Result">
+  </body>
+</html>
