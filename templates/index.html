@@ -5,7 +5,7 @@
   </head>
   <body>
     <h1>Coke Bottle Detector</h1>
-    <form id="upload-form" action="/predict" method="post" enctype="multipart/form-data">
+    <form id="upload-form" action="/result" method="post" enctype="multipart/form-data">
       <input type="file" name="image" id="image-input">
       <br><br>
       <input type="submit" value="Upload">
@@ -18,7 +18,7 @@
       form.addEventListener('submit', async (e) => {
         e.preventDefault();
         const formData = new FormData(form);
-        const response = await fetch('/predict', {
+        const response = await fetch('/result', {
           method: 'POST',
           body: formData
         });
@@ -26,7 +26,7 @@
         const numBottles = data.num_bottles;
         const imageSrc = `data:image/jpeg;base64,${data.image}`;
         const resultHtml = `
-          <p>Number of bottles detected: ${numBottles}</p>
+          <p>Number of bottles: ${numBottles}</p>
           <img src="${imageSrc}" alt="Result">
         `;
         resultContainer.innerHTML = resultHtml;

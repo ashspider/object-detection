@@ -15,7 +15,7 @@ model = torch.hub.load('ultralytics/yolov5', 'custom', path='./best.pt')
 def home():
     return render_template('index.html')
 
-@app.route('/predict', methods=['POST'])
+@app.route('/result', methods=['POST'])
 def predict():
     # get image file from POST request
     file = request.files['image']
