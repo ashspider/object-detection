@@ -50,7 +50,7 @@ debugpy==1.6.2
 decorator==4.4.2
 defusedxml==0.7.1
 distlib==0.3.6
-Django==4.1.7
+
 easydict==1.10
 entrypoints==0.4
 ephem==4.1.3
