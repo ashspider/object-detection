@@ -148,7 +148,7 @@ notebook==6.4.12
 notebook-shim==0.1.0
 numpy==1.10.1
 oauthlib==3.2.2
-object-detection==0.1.1
+object-detection==0.1.2
 omegaconf==2.2.3
 onnx==1.12.0
 onnxruntime==1.13.1
