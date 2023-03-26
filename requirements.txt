@@ -169,7 +169,7 @@ pixellib==0.7.1
 platformdirs==2.5.4
 playsound==1.2.2
 plotly==5.10.0
-polygon-api-client==1.2.0
+polygon-api-client==1.1.0
 portalocker==2.6.0
 proglog==0.1.10
 prometheus-client==0.14.1
