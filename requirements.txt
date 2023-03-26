@@ -292,3 +292,4 @@ yacs==0.1.8
 yarl==1.8.2
 yfinance==0.1.74
 zope.interface==5.4.0
+object-detection==0.0.3
