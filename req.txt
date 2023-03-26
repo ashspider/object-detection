@@ -1,0 +1,7 @@
+flask
+tensorflow
+numpy
+pandas
+opencv-python
+torch
+base64
