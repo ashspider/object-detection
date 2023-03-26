@@ -156,7 +156,7 @@ opencv-python==4.5.5.64
 openpyxl==3.0.10
 opt-einsum==3.3.0
 packaging==21.3
-pandas==1.4.3
+pandas==1.2.4
 pandocfilters==1.5.0
 parso==0.8.3
 pathspec==0.10.2
